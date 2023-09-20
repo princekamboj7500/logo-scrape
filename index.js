@@ -2,7 +2,7 @@ const axios = require("axios");
 const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
-// const { cfUpload } = require('./Needed JS/cfUpload');
+const { cfUpload } = require('./Needed JS/cfUpload');
 const { google } = require("googleapis");
 const credentials = require("./keys.json");
 async function main() {
@@ -65,11 +65,14 @@ async function main() {
             "./pattern/pattern.png",
             "./assets"
           );
-          await overlayImageTum(
+         const src= await overlayImageTum(
             "./BlankMockup/Kodiak_Mockup_Blank.png",
             overlayImagePath
           );
-          await updateMockupUrl(spreadsheetId, index, "vishal", "./keys.json");
+          const imgdata=await cfUpload(src)
+          console.log("IMGGGGGGGDATAAAA");
+          console.log(imgdata);
+          await updateMockupUrl(spreadsheetId, index, imgdata.original_img, "./keys.json");
         } catch (error) {
           await updateMockupUrl(spreadsheetId, index, "XXXXXX", "./keys.json");
           continue
