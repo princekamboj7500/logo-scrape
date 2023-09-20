@@ -1,6 +1,4 @@
 const axios = require('axios');
-const retryAxios = require('retry-axios');
-const { toSystemPath } = require('../../../lib/core/path');
 const fs = require('fs')
 const FormData = require('form-data');
 
