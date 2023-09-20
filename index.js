@@ -2,7 +2,7 @@ const axios = require("axios");
 const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
-const { cfUpload } = require('./Needed JS/cfUpload');
+const { cfUpload } = require("./Needed JS/cfUpload");
 const { google } = require("googleapis");
 const credentials = require("./keys.json");
 async function main() {
@@ -61,32 +61,43 @@ async function main() {
           //   new Date().getTime()
           // );
           // console.log(resizelogoPath);
-          const overlayImagePath = await overlayImage(
+          if (logoPath === undefined) {
+            await updateMockupUrl(
+              spreadsheetId,
+              index,
+              "XXXXXX",
+              "./keys.json"
+            );
+            continue;
+          }
+          var overlayImagePath = await overlayImage(
             logoPath,
             "./pattern/pattern.png",
             "./assets"
           );
-         const src= await overlayImageTum(
+          const src = await overlayImageTum(
             "./BlankMockup/Kodiak_Mockup_Blank.png",
             overlayImagePath
           );
-          const imgdata=await cfUpload(src)
+          const imgdata = await cfUpload(src);
           console.log("IMGGGGGGGDATAAAA");
           console.log(imgdata);
-          await updateMockupUrl(spreadsheetId, index, imgdata.original_img, "./keys.json");
+          await updateMockupUrl(
+            spreadsheetId,
+            index,
+            imgdata.original_img,
+            "./keys.json"
+          );
         } catch (error) {
           console.log(error);
-            if (!updateExecuted) {
-              // Only execute updateMockupUrl if it hasn't been executed before
-              updateExecuted = true; // Set the flag to true
-              await updateMockupUrl(spreadsheetId, index, "XXXXXX", "./keys.json");
-            }
-            continue;
-          }
+          throw error;
         }
       }
     }
+    console.log("END GAME");
+    process.exit();
   }
+}
 
 main();
 
@@ -97,7 +108,7 @@ async function downloadImage(imageUrl) {
     });
 
     if (response.status === 200) {
-      const fileExtension = ".png"; //path.extname(imageUrl);
+      const fileExtension = ".png";
       const localFilePath = `./assets/downloaded-image${fileExtension}`;
       const writer = fs.createWriteStream(localFilePath);
 
@@ -194,7 +205,7 @@ async function updateMockupUrl(
     });
 
     // Specify the range where you want to update the mockupUrl (e.g., "Sheet1!G2")
-    const range = `Sheet1!F${rowIndex + 2}`; 
+    const range = `Sheet1!F${rowIndex + 2}`;
 
     // Update the mockupUrl in the Google Sheet
     const updateResponse =
