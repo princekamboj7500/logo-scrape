@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "cocoon-fires",
+  "private_key_id": "609052bb0055536453129fa32de8a99257d1ffd6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDw378B25hU1T1B\nI60p3us7OT3yORBIYMTizgG3WAdBbSydTT6sV4SdZMJz0vMTiBHBkFLPkDo1LTey\nOIy4dHi0ynPLZGK/KT+8h1W2bWbx/ZfYxrjsF5QraNAYFuA1MgpgipXodww/Moqw\n6IGbQqknaEV7JUQGTFteYkU48tj8WF9m2QkHSLcvXOlbyYRkpZEWqNGF2D3ro4jK\nGD3EatXKR5TRaz3bgdQeyy7JTL/T2fWIRO3bLC6/nlHnsfiB/Lnk8/+DybfQc1Ro\n1rdROj104aztnY4gAkphD8Dmr/yyQ6Mw01PsoLrX6qOKJ51vFdc+xIEwkGbSPUYP\naxYlNWlxAgMBAAECggEAKgVOhBt0CrCcnAWGSvypms5UoTIVRhsjndGEeSCxO1e5\nZcO5AEXQS8jtJ1mQsEKXnmX4HF+z190Ij13QJsmi2R9MbhoYI/MlPFV7vXR+dg7g\nc5/PWNiQL7Z8PweWm5EcQFVM654BE/FUQqJ9IcHSUp6dKGuK33JoqiGIo/OxqOvH\nJIajd2fU/J/vLA3rj6QFa0jrM9oC/S724o9XEPRlGcYoJxp20+iGe+VEQsKkkoXW\nMvKKRTAW6ZPTc7/pWHR0xe0PbY9XN8XUzjVTkmVdZiLzwrawfoNcDzErvRGPhmSw\n9cmbiDMBp7nzdyIcZRrEdsxwzlz00INa9NAbF5GshQKBgQD/JxYVi+mdJpdvLZQ3\nqpXmP8w4PKCAEGHC8br0qWZzdqSf8poCAqocQdRoPJ5/eu/x08CwJs3kBuq/iK3w\n2OyyVl0WQRNY4wI787Xra4d7nb0y6wSFZgNxtXbLIDmvkPLyayy2bTu3bWyjI4iP\ntKRpjkGvDsOverjENBkWCwOxzwKBgQDxrIVlxCi0UpjsTzBFMNWJwq34GJQ4qyOW\nec0BFqP3P2OXOVqg5AfImjiUhta0fMaeuaCsUuQOLsyVC5PY5ixIQmVC/braoxQ/\nh42fi9fi9+SkKHlNCbY9qksslXaUPvqWhMr4uWYAd2BC9+fbvvwhRxKJhXgBfc2P\nQ+5iLwBAvwKBgEjou1fG1ieQyn77cDoD5beYjVuYf2h4xea1um2FJoBh66LE6Rsf\n9coDSZXLlKLq1zur/YiYXgcFrviyLrn+0owXP5xHVib1H0NQXbB61okNRu4Q2Abi\nYqOQbfSXLcSsT6/TzkAGsKS2gO+RDMm7nauH+d7zAhnXoIp4NJ7m4NRjAoGAHKj0\n+OiWWywgboXFl67+4+NudimUClRhWAsBwMtKjpu518k5cjMYqTWA2DxVYfoaI+Cn\nqUf7O6NZJ6PD2MkTH06ga51jd2I3mIEeznjrFUOInd8e43/vWMjFOXhQI6yEUy1U\nVMLH0e5WQBreKDUx+VBQZnapkKO2qPLJZmNkiEkCgYEAz82Y5+32y7xZsH38WBws\nX7O11d87PS3qf8Prr3TcI8mxrE0edp5sq2JgyOexpESR9px7X11mZiNs/KGlNaSp\nYxODb6RArKkFOHXwdPHvRtMp3AjDFglvfox3+Ct55P1GPUuOR2IlQwk0G2Xh2l2k\nBC65n/A3dQ33vmio9iMAagA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "cococn@cocoon-fires.iam.gserviceaccount.com",
+  "client_id": "112638374623947835360",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cococn%40cocoon-fires.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
