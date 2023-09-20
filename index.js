@@ -47,6 +47,7 @@ async function main() {
 
   if (data.length) {
     for (let index = 0; index < data.length; index++) {
+      let updateExecuted = false;
       if (data[index].mockupUrl === "") {
         try {
           const logoPath = await downloadImage(
@@ -74,13 +75,19 @@ async function main() {
           console.log(imgdata);
           await updateMockupUrl(spreadsheetId, index, imgdata.original_img, "./keys.json");
         } catch (error) {
-          await updateMockupUrl(spreadsheetId, index, "XXXXXX", "./keys.json");
-          continue
+          console.log(error);
+            if (!updateExecuted) {
+              // Only execute updateMockupUrl if it hasn't been executed before
+              updateExecuted = true; // Set the flag to true
+              await updateMockupUrl(spreadsheetId, index, "XXXXXX", "./keys.json");
+            }
+            continue;
+          }
         }
       }
     }
   }
-}
+
 main();
 
 async function downloadImage(imageUrl) {
